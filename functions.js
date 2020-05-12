@@ -58,36 +58,8 @@ let products = [
 let chosenDepartment = "";
 
 function renderProducts() {
-    let html = ""; // Your code here!
-    /*
-    using the product array
-
-    Perform a filter, a map, and a reduce function. (Just like in the reading!)
-
-    The html you create for each item should have:
-    an outer <li>
-    an <h3> title of the item
-    and a price
-
-    There are two filters to be applied!
-    First, do not show out of stock items! If the quantity is zero then
-    do not display the item.
-
-    Secondly, you ahve to apply the filter.  
-    The Buttons are already wired up, so when you click a button it will 
-    set chosenDepartment.  If the item's department matches the 
-    chosenDepartment, then display it.
-
-    But watch out for the showAll case! If the chosenDepartment is blank,
-    then you should show all items!  (That are in stock, of course)
-
-    Hint: You can do this within one filter function, or you can have 
-    multiple filter functions!  This can be very cleanly done with two 
-    filter functions, one for checking if it's in stock, the other for checking
-    the chosenDepartment.
-    */
-
-
+    let html = "";   
+    
     html = products.filter(function (product) {
         return product.quantity > 0;
     }).filter(function (product) {
@@ -127,3 +99,31 @@ window.onload = () => {
     }
 }
 
+ // 
+    /*
+    using the product array
+
+    Perform a filter, a map, and a reduce function. (Just like in the reading!)
+
+    The html you create for each item should have:
+    an outer <li>
+    an <h3> title of the item
+    and a price
+
+    There are two filters to be applied!
+    First, do not show out of stock items! If the quantity is zero then
+    do not display the item.
+
+    Secondly, you ahve to apply the filter.  
+    The Buttons are already wired up, so when you click a button it will 
+    set chosenDepartment.  If the item's department matches the 
+    chosenDepartment, then display it.
+
+    But watch out for the showAll case! If the chosenDepartment is blank,
+    then you should show all items!  (That are in stock, of course)
+
+    Hint: You can do this within one filter function, or you can have 
+    multiple filter functions!  This can be very cleanly done with two 
+    filter functions, one for checking if it's in stock, the other for checking
+    the chosenDepartment.
+    */
